@@ -1,0 +1,10 @@
+{
+  "version" : "2017-02-28",
+  "operation": "Invoke",
+  "payload": {
+  "method": "GET",
+  "query_type": "sparql",
+  "prefix": "",
+  "query": "select  ?s where { ?continent_object a <http://kelvinlawrence.net/air-routes/class/Continent>. ?continent_object <http://kelvinlawrence.net/air-routes/datatypeProperty/code> ?ctry_code. ?continent_object <http://kelvinlawrence.net/air-routes/objectProperty/contains> ?s. ?s <http://kelvinlawrence.net/air-routes/datatypeProperty/type> ?type1. ?s <http://kelvinlawrence.net/air-routes/datatypeProperty/code> ?o1_code. filter(?ctry_code in ('$context.source.code')).}",
+  }
+}
