@@ -1,0 +1,38 @@
+type Query {
+	getairports(code: String): [airport]
+	get_airports_bycountry(code: String): [country]
+	get_airports_bycontinent(code: String): [continent]
+}
+
+type airport {
+	type: String
+	code: String
+	desc: String
+	icao: String
+	region: String
+	runways: String
+	longest: String
+	elev: String
+	country: [country]
+	city: String
+	lat: String
+	lon: String
+}
+
+type continent {
+	code: String
+	desc: String
+	type: String
+	airports: [airport]
+}
+
+type country {
+	code: String
+	desc: String
+	type: String
+	airports: [airport]
+}
+
+schema {
+	query: Query
+}
