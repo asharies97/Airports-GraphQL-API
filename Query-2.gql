@@ -1,0 +1,23 @@
+query MyQuery {
+	getairports(code: "IXC") {
+	    code
+	    city
+	    desc
+	    runways
+	    country {
+	      code
+	      desc
+	    }
+	  }
+
+	  get_airports_bycontinent(code: "AS") {
+	    code
+	    desc
+	    type
+	    airports {
+	      city
+	      code
+	    }
+	  }
+	}
+
